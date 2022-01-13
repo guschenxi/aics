@@ -83,6 +83,7 @@ Phew, no error should occur anymore. Now, just complete the rest of the steps to
 ```
 cd ~/volta
 cd tools/refer; make
+cd ~/volta
 python3.6 setup.py develop
 ```
 
