@@ -63,6 +63,7 @@ You should see a message that will mention what has been reloaded with a version
 Next, gcc has some library dependencies which are outdated for the current Ubuntu version that we use on mlt-gpu. Specifically, you will encounter the error while training your models that will say that gcc cannot locate `libmpfr.so.6`. Through trial and error I have discovered that this version needs `libmpfr.so.4` instead. But our Ubuntu has removed this library because it is quite oudated. And as normal users we do not have root rights to install any package of any version on mlt-gpu. Thus, we are going to download the file we need and point its location in the `LD_LIBRARY_PATH`, an environment variable that is used by the system to locate packages. We do the steps below in our home directory. `user_dir` stands for your home directory on mlt-gpu (it is a placeholder, that is, you have to replace it with your home directory, do not forget to remove the brackets!).
 
 ```
+cd ~
 wget https://repo.almalinux.org/almalinux/8/BaseOS/x86_64/os/Packages/mpfr-3.1.6-1.el8.x86_64.rpm
 rpm2cpio mpfr-3.1.6-1.el8.x86_64.rpm | cpio -idmv
 export LD_LIBRARY_PATH=/home/{user_dir}/usr/lib64:$LD_LIBRARY_PATH
