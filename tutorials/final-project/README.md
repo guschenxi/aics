@@ -32,6 +32,7 @@ You can either add path to your conda-based Python 3.6 to your PATH environment 
 ```
 conda create -n volta python=3.6
 conda activate volta
+cd ~/volta
 python3.6 -m pip install -r requirements.txt
 ```
 
