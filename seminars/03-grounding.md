@@ -15,7 +15,7 @@ S. Harnad. [The symbol grounding problem.](https://doi.org/10.1016/0167-2789(90)
 
 Perceptual grounding
 
-![image](03-grounding/harnad.png){width="66.7%"}
+![image](03-grounding/harnad.png)
 
 
 Image from J. D. Kelleher. How to preposition a robot: A case-study in symbol grounding. Presentation at the University College Dublin Research Seminars, 2010.
@@ -238,7 +238,7 @@ Words as classifiers
 
 A scene:
 
-![image](03-grounding/roy-description-task.png){width=".33\\textwidth"}
+![image](03-grounding/roy-description-task.png)
 
 Training instances
 
@@ -298,7 +298,7 @@ Grounding sequences of words bottom up:
 Study of grounding in human language acquisition:
 
   - Deb Roy. 2011. [The birth of a word.](https://www.ted.com/talks/deb_roy_the_birth_of_a_word) Talk, TED: Ideas worth spreading.
-  - Brandon Cain Roy. 2013. The birth of a word. Doctor of philosophy in media arts and sciences, Program in Media Arts and Sciences, School of Architecture and Planning, Massachusetts Institute of Technology.
+  - Brandon Cain Roy. 2013. [The birth of a word.](https://www.media.mit.edu/publications/the-birth-of-a-word/) Doctor of philosophy in media arts and sciences, Program in Media Arts and Sciences, School of Architecture and Planning, Massachusetts Institute of Technology.
 
 
 
