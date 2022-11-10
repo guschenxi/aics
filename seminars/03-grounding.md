@@ -13,6 +13,14 @@ S. Harnad. [The symbol grounding problem.](https://doi.org/10.1016/0167-2789(90)
  - top-down and bottom-up systems: work in complementarity as grounded symbols are manipulated (cf. learning to compose); compatible with behaviourism
  - iconic representations discriminate (one pattern from another); categorical identify (i.e. a horse) symbolic representations require structure / compositionality (zebra = horse & stripes)
 
+Perceptual grounding
+
+![image](03-grounding/harnad.png){width="66.7%"}
+
+
+Image from J. D. Kelleher. How to preposition a robot: A case-study in symbol grounding. Presentation at the University College Dublin Research Seminars, 2010.
+
+
 
 ### Discussion
 
@@ -191,7 +199,7 @@ Symbols are not grounded only on arbitrary shapes but their grounding is based o
 
 ## Roy
 
-D. Roy. [Learning visually-grounded words and syntax for a scene description task.](https://doi.org/10.1016/S0885-2308(02)00024-4) Computer speech and language, 16(3):353–385, 2002.
+Deb Roy. 2002. [Learning visually-grounded words and syntax for a scene description task.](https://doi.org/10.1016/S0885-2308(02)00024-4) Computer speech and language, 16(3):353–385. 
 
 Roy (2002) describes a computational implementation of how scene descriptions are connected to the visual representations of abstract scenes. It describes the grounding in a Bayesian probabilistic approach which provides an intuitive description of how representations at different levels of language are grounded. How is grounding implemented in practice? What techniques from natural language processing that you know from before are applied and how they are extended?
 
@@ -224,6 +232,75 @@ Roy (2002) describes a computational implementation of how scene descriptions ar
     ψ(Q)=fit(x_target,Q)−max∀x=/=target fit(x,Q)
   * Combine the scores from syntactic and contextual constraints with a weighted sum
 * Grounding spatial clauses / descriptions
+
+
+Words as classifiers
+
+A scene:
+
+![image](03-grounding/roy-description-task.png){width=".33\\textwidth"}
+
+Training instances
+
+-   Vector of real-valued features representing the objects in the scene: r, g, b, hw_ratio, area, x, y mm_dimension
+-   Natural language descriptions
+    -   The pink square
+    -   The light blue square
+    -   The brightest green rectangle
+    -   The purple rectangle to the left of the pink square
+    -   The narrow purple rectangle below and to the right of the blue
+        square
+
+Learning
+
+-   Cluster words into classes (using probabilistic models):
+    -   Based on word distributions: words within a class co-occur infrequently with other words in that class
+    -   Their association with semantic features
+    -   A combination of both
+-   Statistical bi-gram model of classes (encodes word order constraints)
+
+ Generation
+
+-   For each bi-gram sequence of classes, for each class choose the most likely word given the target object:
+    -   the, the rectangle, the green rectangle, the large green rectangle, the large light green rectangle ...
+-   Estimate the fit of each description to the target object: the likelihood of a sequence of words to refer to the features of the object
+-   Contextual constraints and ambiguity of a description:\
+    $\psi(Q) = fit(x_{target},Q) - \max_{\forall x \neq target}fit(x,Q)$
+-   Combine the scores from syntactic and contextual constraints with a weighted sum
+-   Evaluated by 3 human judges to select the target object given a
+    description:
+    -   human-generated: 89.8%
+    -   machine-generated: 81.3%
+
+Further reading and resources
+
+Using the words as classifiers approach with robots:
+  - Simon Dobnik. 2006. [Learning spatial referential words with mobile robots.](https://gup.ub.gu.se/publication/289797?lang=en) In Proceedings of the 9th Annual CLUK Research Colloquium, pages 1–8, Milton Keynes, United Kingdom. The Open University.
+  - Simon Dobnik. 2009. [Teaching mobile robots to use spatial words.](https://gup.ub.gu.se/publication/270997) Ph.D. thesis, University of Oxford: Faculty of Linguistics, Philology and Phonetics and The Queen’s College, Oxford, United Kingdom.
+  - Erik de Graaf. 2016. [Learning objects and spatial relations with Kinect.](http://hdl.handle.net/2077/66207) Master’s thesis, Department of Philosophy, Linguistics and Theory of Science. University of Gothenburg, Gothenburg, Sweden, June, 8th. Supervisor: Simon Dobnik, examiner: Richard Johansson, opponent: Lorena Llozhi.
+  - Simon Dobnik and Erik de Graaf. 2017. [KILLE: a framework for situated agents for learning language through interaction.](https://gup.ub.gu.se/publication/253950) In Proceedings of the 21st Nordic Conference on Computational Linguistics (NoDaLiDa), pages 162–171, Gothenburg, Sweden. Northern European Association for Language Technology (NEALT), Association for Computational Linguistics. [Eric's code](https://github.com/masx/Kille)
+  - José Miguel Cano Santín. 2019. [Fast visual grounding in interaction: bringing few-shot learning with neural networks to an interactive robot.](http://hdl.handle.net/2077/62035) Masters in language technology (mlt), 30 hec, Department of Philosophy, Linguistics and Theory of Science (FLOV), University of Gothenburg, Gothenburg, Sweden. Supervisor: Simon Dobnik and Mehdi Ghanimifard, examiner: Aarne Ranta. [Jose's code](https://github.com/jcanosan/Interactive-robot-with-neural-networks)
+  - José Miguel Cano Santín, Simon Dobnik, and Mehdi Ghanimifard. 2020. [Fast visual grounding in interaction: bringing few-shot learning with neural networks to an interactive robot.](https://gup.ub.gu.se/publication/294796?lang=en) In Proceedings of Conference on Probability and Meaning (PaM-2020), Gothenburg, Sweden, pages 1–9, Gothenburg, Sweden. Association for Computational Linguistics (ACL), Special Interest Group on Computational Semantics (SIGSEM).
+
+Words as classifiers + formal representations
+
+  - Cynthia Matuszek, Evan Herbst, Luke Zettlemoyer, and Dieter Fox. 2012. Learning to parse natural language commands to a robot control system. In Proceedings of the 13th International Symposium on Experimental Robotics (ISER).
+  - Simon Dobnik and Robin Cooper. 2017. [Interfacing language, spatial perception and cognition in Type Theory with Records.](https://gup.ub.gu.se/publication/251413) Journal of Language Modelling, 5(2):273–301.
+  - Simon Dobnik and John D. Kelleher. 2017. [Modular mechanistic networks: On bridging mechanistic and phenomenological models with deep neural networks in natural language processing.](https://gup.ub.gu.se/publication/262955?lang=en) In Proceedings of the Conference on Logic and Machine Learning in Natural Language (LaML 2017), Gothenburg, 12–13 June 2017, volume 1 of CLASP Papers in Computational Linguistics, pages 1–11, Gothenburg, Sweden. Department of Philosophy, Linguistics and Theory of Science (FLOV), University of Gothenburg, CLASP, Centre for Language and Studies in Probability.
+  - Arild Matsson. 2018. [Implementing perceptual semantics in type theory with records (ttr).](http://hdl.handle.net/2077/62521) Masters in language technology (mlt), 30 hec, Masters in Language Technology (MLT), Department of Philosophy, Linguistics and Theory of Science. University of Gothenburg, Gothenburg, Sweden, September 24. Examiner: Peter Ljunglöf; supervisors: Simon Dobnik and Staffan Larsson; opponent: Axel Almqvist. [Arild's code](https://github.com/arildm/imagettr)
+  - Arild Matsson, Simon Dobnik, and Staffan Larsson. 2019. [ImageTTR: Grounding Type Theory with Records in image classification for visual question answering.](https://gup.ub.gu.se/publication/284011?lang=en) In Proceedings of the IWCS 2019 Workshop on Computing Semantics with Types, Frames and Related Structures, pages 55–64, Gothenburg, Sweden. Association for Computational Linguistics.
+  - Ronja Utescher. 2019. [Visual TTR - modelling visual question answering in type theory with records.](https://www.aclweb.org/anthology/W19-0602) In Proceedings of the 13th International Conference on Computational Semantics - Student Papers, pages 9–14, Gothenburg, Sweden. Association for Computational Linguistics.
+
+Grounding sequences of words bottom up: 
+
+  - Mehdi Ghanimifard and Simon Dobnik. 2017. Learning to compose spatial relations with grounded neural language models. In Proceedings of IWCS 2017: 12th International Conference on Computational Semantics, pages 1–12, Montpellier, France. Association for Computational Linguistics. [Mehdi's code](https://github.com/GU-CLASP/spatial-composition)
+
+Study of grounding in human language acquisition:
+
+  - Deb Roy. 2011. [The birth of a word.](https://www.ted.com/talks/deb_roy_the_birth_of_a_word) Talk, TED: Ideas worth spreading.
+  - Brandon Cain Roy. 2013. The birth of a word. Doctor of philosophy in media arts and sciences, Program in Media Arts and Sciences, School of Architecture and Planning, Massachusetts Institute of Technology.
+
+
 
 
 
