@@ -15,7 +15,7 @@ S. Harnad. [The symbol grounding problem.](https://doi.org/10.1016/0167-2789(90)
 
 Perceptual grounding
 
-![image](03-grounding/harnad.png | width=640)
+![image](03-grounding/harnad.png)
 
 
 Image from J. D. Kelleher. How to preposition a robot: A case-study in symbol grounding. Presentation at the University College Dublin Research Seminars, 2010.
@@ -238,7 +238,7 @@ Words as classifiers
 
 A scene:
 
-![image](03-grounding/roy-description-task.png | width=300)
+![image](03-grounding/roy-description-task.png)
 
 Training instances
 
