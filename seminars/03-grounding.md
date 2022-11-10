@@ -18,6 +18,34 @@ S. Harnad. [The symbol grounding problem.](https://doi.org/10.1016/0167-2789(90)
 
 ## 2022 groups
 
+  - Group 5: Harnad, theoretical background, implementation details?
+  - Iconic, categorical represnetations (objective? domain specific? what the software is going to be used for?)
+  - Symbolic and connectionist systems: the difference?
+    * neural networks
+    * symblic "successes of AI"
+    * a combination of both
+    * top-down and bottom up, inductive vs deductive
+    * symbolic systems can reason with rules, but the meaning of symbols is arbitrary
+    * discrete vs continuous; reasoning with both? not possible to reason deductively with continuous representations? inference with neural models for logical problems (finding patterns of sentences rather than reasoning)
+    * formal symbol systems that are grounded; proof-theoretic and model-theoretic approach to logic
+    * can a large model from syntax generalise semantic information; semantic information extracted from syntax alone
+    * can we generate a model from a large-enough corpus of text such that it will be the only model
+    * current NLP models are pattern finders and do not apply reasoning; this is inherent in the architecture, we need better architectures
+    * does increasing the size of the model lead the model to make inferences or just remembering more patterns?
+    * computational creativity: re-combination of previous patterns using probabilities knowledge
+    * a hybrid systems keeps the best of two worlds
+    * distributed semantics: embeddings, connectivity
+    * language as a string of symbols, to what degree strings can be modelled with word-embeddings?
+    * symbolic system allows us to communicate more efficiently; categories to generalise information
+    * what is a feature determines where continuous becomes discrete?
+    * features that are important for different categories: feature selection
+  - The need of grounding for understanding language; NLP performs well without grounding?
+    * Grounding for the POS tagger?
+  - What is understanding language? Is grounding representations understanding?
+  - What is the correct grounding framework or in what modlaities can we/must we ground language?
+  - Humans also impoverished access to modalities sometimes, so manipulation of symbols is a very impoverished way of accessing semantics, one kind of
+  - But we are grounded partially, so we are able to connect are grounded and ungrounded experiences of language
+  - Ferrone, Lorenzo, and Fabio Massimo Zanzotto. "Symbolic, distributed, and distributional representations for natural language processing in the era of deep learning: A survey." Frontiers in Robotics and AI 6 (2020): 153.
 
 
 
@@ -200,6 +228,25 @@ Roy (2002) describes a computational implementation of how scene descriptions ar
 
 
 ### Discussion
+
+#### 2022 groups
+
+  - the grounded NLP pipeline
+  - the maths
+  - approaches for word clustering: semantic and distributional; related to the previous points
+  - multi-relational phrases, how to ground them? e.g. "to the left of"
+  - FSM for multiple clauses
+  - 200 utterances but only 1 person who produced the dataset; we need more describers
+  - visuals, colourful squares are simplistic; need a more advanced visual part
+  - transparent non-neural framework (vs neural network), can examine features
+  - does the system understand language now
+  - construction grammar, categories; cluster instances to existing categories and if an example is too different from them, create a new category
+  - generation of utterances with speech
+  - What are good features for graounding: specific geometric features in Roy vs visual features; the type of features will leave to different grounding success
+  - fetaures are rperesented as Gaussian distributioon; but this is simplifaction
+  - engineering decisions of features affect modelling; but we bring our knowledge to the modeeling hoping that it is correct
+  - need to make all the calculations for every word in every class and every feature
+
 
 
 #### 2021 groups
