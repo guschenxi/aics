@@ -79,6 +79,32 @@ Bulidng robotic systems: a layered approach
 
 ### Discussion
 
+#### 2022 groups
+
+SLTC 2022 in Stockholm https://2022.sltc.se/
+
+  - spatial mapping, vision: mathematical background
+  - robots learning from humans, pre-programming does not work
+  - bottom-up induction and top-down rule-based (the second paper argues for top-down rules), bottom-up learning is black-box, follow and track errors in a rule-based system, but ML allows us more natural communication, covers more situations; small vs large domain (independent)
+  - To what degree general ML models would fit particular situation?
+  - How good are neural models on learning on the go?
+    * Adding a new clas to ML model?
+    * Zero-shot learning and few-shot learning
+  - What are challenges for applying neural networks to the robotic setting?
+  - https://hci.stanford.edu/~winograd/shrdlu/
+  - Tological representation of space
+    * The division of modules is based on the practical considerations of available modules; but it would make sense to remove strong boundaries different levels; topological aspects at different levels
+  - Modules used in robotis systems
+    * The diagrams from both papers, spatial robotics and Kille
+    * SUMO ontology https://www.ontologyportal.org/
+  - Different ways of recognising objects/places
+    * Lasers scans vs camera image; detect doors from camera vs from laser scans
+    * Engineering constrains what systems are available
+    * A system could verify an object/region from different modalities
+  - The uses of the robots?
+    * Directions
+    * Personal assistants
+
 #### 2021 groups
 
 * G3: the environment the system can work in: how transferable and how to discretise environments
