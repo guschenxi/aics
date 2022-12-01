@@ -16,7 +16,8 @@ But first, please read the paper and check the repository:
 
 Follow the steps below, I have tested the installation with training and testing for MSCOCO retrieval task.
 The steps differ from those in the official repository, please install the framework the way it is described below.
-Last update: 13/01/2022.
+
+Last update: 01/12/2022.
 
 First, clone the repository with all submodules in it:
 
@@ -28,6 +29,8 @@ Then, create a conda environment and install all dependencies. Note that I ran p
 There could be multiple versions of Python installed in your home directory: internal (system) Python, versions from other environments.
 When you run `python` in your installed environment, you expect it to use `python3.6`, but what often happens is that conda is using some other version of Python.
 You can either add path to your conda-based Python 3.6 to your PATH environment variable (or, simply put the python path in `bashrc` file, and it will be sourced automatically every time you log in), or explicitly run every command by calling desired python (as I do below). Read a little more about environment variables and files like `bashrc` [here](https://bic-berkeley.github.io/psych-214-fall-2016/using_pythonpath.html).
+
+It looks like there is python3.10 on mlt-gpu at the moment, but transformers' codebase works only with python3.6, so make sure you have this specific version in your environment.
 
 ```
 conda create -n volta python=3.6
