@@ -27,19 +27,20 @@ First, clone the repository with all submodules in it:
 git clone --recurse-submodules https://github.com/e-bug/volta.git
 ```
 
-Then, create a conda environment and install all dependencies. Note that I ran pip-related installations by explicitly calling `python3.6`.
-There could be multiple versions of Python installed in your home directory: internal (system) Python, versions from other environments.
+Next, there is already a conda environment for you to use. It is installed in /scratch directory, e.g. it can be accessed by anyone on the server. If you accidentally deleted that, don't hesitate to install it yourself by following the instructions below.
+Why is it installed in /scratch? Mlt-gpu is super slow and installing it in your home directory could take ages, a simpler option is to have this server-wide accessible environment.
+
+```
+conda create --prefix /scratch/volta python=3.6
+conda activate /scratch/volta/
+cd ~/volta
+python -m pip install -r requirements.txt
+```
+
+Important information: there could be multiple versions of Python installed in your home directory: internal (system) Python, versions from other environments.
 When you run `python` in your installed environment, you expect it to use `python3.6`, but what often happens is that conda is using some other version of Python.
 You can either add path to your conda-based Python 3.6 to your PATH environment variable (or, simply put the python path in `bashrc` file, and it will be sourced automatically every time you log in), or explicitly run every command by calling desired python (as I do below). Read a little more about environment variables and files like `bashrc` [here](https://bic-berkeley.github.io/psych-214-fall-2016/using_pythonpath.html).
-
-It looks like there is python3.10 on mlt-gpu at the moment, but transformers' codebase works only with python3.6, so make sure you have this specific version in your environment.
-
-```
-conda create -n volta python=3.6
-conda activate volta
-cd ~/volta
-python3.6 -m pip install -r requirements.txt
-```
+But for now, this problem should not arise - if you are within the environment, Anaconda works as expected and picks the correct version of Python.
 
 Next, we are going to install Pytorch (specific version of it). It is important that you install this version, because newer versions
 might cause dependency conflicts later (conflicts with CUDA, gcc, etc.).
