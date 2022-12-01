@@ -82,7 +82,7 @@ We are nearly there to compile Apex. Still, there will be a problem with Apex no
 ```
 cd apex
 git reset --hard 3fe10b5597ba14a748ebb271a6ab97c09c5701ac
-python3.6 setup.py install --cpp_ext --cuda_ext
+python setup.py install --cpp_ext --cuda_ext
 ```
 
 If your run was unsuccessful, remove `build` folder (if there is one), because next time you try to run it, there will be a conflict between builds.
@@ -93,7 +93,7 @@ Phew, no error should occur anymore. Now, just complete the rest of the steps to
 cd ~/volta
 cd tools/refer; make
 cd ~/volta
-python3.6 setup.py develop
+python setup.py develop
 ```
 
 ## Before you start using Volta
