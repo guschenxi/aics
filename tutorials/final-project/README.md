@@ -1,3 +1,7 @@
+Last update: 01/12/2022.
+
+---
+
 # Codebase for working with multi-modal transformers (MMTs)
 
 This folder includes information on how to install and use VOLTA framework to use in your AICS projects.
@@ -16,8 +20,6 @@ But first, please read the paper and check the repository:
 
 Follow the steps below, I have tested the installation with training and testing for MSCOCO retrieval task.
 The steps differ from those in the official repository, please install the framework the way it is described below.
-
-Last update: 01/12/2022.
 
 First, clone the repository with all submodules in it:
 
