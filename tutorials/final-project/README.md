@@ -51,7 +51,8 @@ conda install pytorch=1.4.0 torchvision=0.5 cudatoolkit=10.1 -c pytorch
 
 Now, we want to install Apex. This library allows us to perform distributed training (e.g., allow GPUs to distribute the job between themselves in order to ease training, make it faster and more precise). There are many benefits to it, you can read more [here](https://developer.nvidia.com/blog/apex-pytorch-easy-mixed-precision-training/).
 Installing Apex is not that simple, below I explain the steps you need to take to do it on mlt-gpu.
-First, clone the corresponding GitHub repository in your home directory. We also need to set CUDA_HOME to the CUDA version we want to use (mlt-gpu has several CUDA versions, you often need to choose a specific one):
+First, clone the corresponding GitHub repository in your home directory. There is some version of Apex within Volta itself, but we are not going to use it due to some dependency conflicts.
+We also need to set CUDA_HOME to the CUDA version we want to use (mlt-gpu has several CUDA versions, you often need to choose a specific one):
 
 ```
 git clone https://github.com/NVIDIA/apex
