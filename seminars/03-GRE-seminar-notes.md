@@ -58,6 +58,26 @@ M. Mitchell, X. Han, J. Dodge, A. Mensch, A. Goyal, A. Berg, K. Yamaguchi, T. Be
 
 ### Discussions
 
+#### Groups, 2022
+ 
+ * Robotic applications vs vision and language applications
+ * When is vision and lanuage needed?
+ * The role of basic technology vs the role of applications
+ * OCR and vision and language
+ * Language and vision models, cf. Desmon Elliot's model using visual information for textual tasks
+ * J. B. Tenenbaum. Cognitive and computational building blocks for morehuman-like language in machines. Acl 2020 keynote, Center for Brains, Minds and Machines, MIT, July 5 2020. https://slideslive.com/38929461/cognitive-and-computational-building-blocks-for-more-humanlike-language-in-machines
+ * Is there an end to rule-based template-based models?
+ * Models and hallucination; reliable generation of syntactically and semantically based sentences
+ * Rule-based systems are more reliable
+ * Evaluation of GRE systems
+ * Does the fitst system hallucinate verbs? In the image nouns are visible, verbs can be extrapolated; we do this naturally as humans; we need sequences of images to recognise actions
+ * Identifying nouns and relations between them is more crucial for robots (but for captions these can perhaps be hallucinated)
+ * Networks don't have ability to differentiate between general and specific situations
+ * What is relevant to describe in an image: what is the goal, who is the speaker, hearer, why was the picure taken, unexpected situation (?); this is not constant and changes from situation to situation; neede a system that would make contectual inference of attention / relevance
+ * Discussion of attention and adaptive attention; when to focus on image and when on language model
+ * Language and vision were weighted in the Roy paper but the weights were determined arbitrarily
+
+ 
 #### Groups, 2021
 
 * G1: generation of prepositions, relations between bounding boxes;
