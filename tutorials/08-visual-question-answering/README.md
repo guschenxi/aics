@@ -1,1 +1,1 @@
-We recommend you to run Jupyter Lab in the virtual environment; you will have to create a kernel in your virtual environment for this, (https://stackoverflow.com/questions/37085665/in-which-conda-environment-is-jupyter-executing)[read more]
+We recommend you to run Jupyter Lab in the virtual environment; you will have to create a kernel in your virtual environment for this, [read more](https://stackoverflow.com/questions/37085665/in-which-conda-environment-is-jupyter-executing)
