@@ -62,7 +62,7 @@ A. Lazaridou, A. Peysakhovich, and M. Baroni. [Multi-agent cooperation and the e
 
 ### Groups, 2022
 
-See notes for the previous paper.
+See the notes for the previous paper.
 
 
 
