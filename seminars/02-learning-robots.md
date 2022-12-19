@@ -65,7 +65,7 @@ Courses in robotics:
 
 Bulidng robotic systems: a layered approach 
 
-![image](05-learning-robots/three-layers.png)
+![image](02-learning-robots/three-layers.png)
 
 -   Integration of (independent) processes
 -   Information exchange and flow
@@ -250,17 +250,17 @@ Instruction Based Learning (IBL)
 
 [@Lauria:2001] and [@LauriaEtAl:2002b]
 
-![image](05-learning-robots/ibl.png)
+![image](02-learning-robots/ibl.png)
 
 
 Primitive Actions
 
-![image](05-learning-robots/ibl-primitive-actions.png)
+![image](02-learning-robots/ibl-primitive-actions.png)
 
 
 Primitive Actions
 
-![image](05-learning-robots/ibl-architecture.png)
+![image](02-learning-robots/ibl-architecture.png)
 
 
 
