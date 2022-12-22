@@ -48,3 +48,8 @@ where TYPE is either train or eval.
 
 Don't forget to fix paths in ``il_vqa.yaml`` file.
 
+#### Papers and code based on EQA
+
+https://github.com/YasMME/habitat-lab
+
+Check different branches for different experiments.
